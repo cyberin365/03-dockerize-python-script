@@ -15,5 +15,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application code into container
 COPY trivialScript.py .
 
+# Set environment variables
+ENV MAX_ROWS=10
+ENV RANDOM_SEED=42
+
 # Command to run the application
 CMD ["python", "trivialScript.py"]
